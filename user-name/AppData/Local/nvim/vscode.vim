@@ -1,0 +1,1 @@
+C:/Users/kanmii/AppData/Local/nvim/vscode.vim
