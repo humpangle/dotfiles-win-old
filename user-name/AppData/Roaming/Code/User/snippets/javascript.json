@@ -1,1 +1,12 @@
-C:/Users/kanmii/AppData/Roaming/Code/User/snippets/javascript.json
+{
+  "ts-ignore": {
+    "prefix": "tsignore",
+    "body": ["// @ts-ignore"],
+    "description": "ts-ignore"
+  },
+  "ts-nocheck": {
+    "prefix": "tsnocheck",
+    "body": ["// @ts-nocheck"],
+    "description": "ts-nocheck"
+  }
+}

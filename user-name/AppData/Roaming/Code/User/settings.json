@@ -1,41 +1,60 @@
 {
+  "[csharp]": {
+    "editor.defaultFormatter": "ms-dotnettools.csharp"
+  },
+  "[dart]": {
+    "editor.defaultFormatter": "Dart-Code.dart-code",
+    "editor.formatOnSave": true,
+    "editor.formatOnType": false,
+    "editor.rulers": [80],
+    "editor.selectionHighlight": false,
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "editor.suggestSelection": "first",
+    "editor.tabCompletion": "onlySnippets",
+    "editor.wordBasedSuggestions": false
+  },
   "[elixir]": {
-    "editor.wordBasedSuggestions": false,
     "editor.formatOnType": false,
     "editor.trimAutoWhitespace": false,
-    "files.trimTrailingWhitespace": true,
+    "editor.wordBasedSuggestions": false,
     "files.insertFinalNewline": true,
-    "files.trimFinalNewlines": true
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true
+  },
+  "[powershell]": {
+    "editor.defaultFormatter": "ms-vscode.powershell"
   },
   "[python]": {
     "editor.defaultFormatter": "ms-python.python",
     "editor.tabSize": 4
   },
-  "[csharp]": {
-    "editor.defaultFormatter": "ms-dotnettools.csharp"
-  },
   "[shellscript]": {
     "editor.defaultFormatter": "foxundermoon.shell-format"
   },
   "advancedNewFile.exclude": {
+    "**/coverage": true,
+    ".elixir_ls": true,
+    ".mypy_cache": true,
+    ".next": true,
+    ".pytest_cache": true,
+    "__pycache__": true,
+    "_build": true,
+    "bower_components": true,
+    "build": true,
+    "deps": true,
+    "dist": true,
     "node_modules": true,
     "node_modules_electron": true,
-    "**/coverage": true,
     "rls": true,
-    "target": true,
-    "dist": true,
-    "__pycache__": true,
-    "bower_components": true,
-    "deps": true,
-    "_build": true,
-    "build": true,
-    ".elixir_ls": true,
-    ".pytest_cache": true,
-    ".mypy_cache": true,
-    ".next": true
+    "target": true
   },
   "cSpell.language": "en,de",
   "cSpell.userWords": ["Multithreading", "neovim", "nvim", "semibold"],
+  "css.validate": true,
+  "dart.allowAnalytics": false,
+  "dart.enableSnippets": false,
+  "dart.flutterCreateOffline": true,
+  "dart.flutterHotReloadOnSave": "always",
   "debug.javascript.terminalOptions": {
     "skipFiles": [
       "${workspaceFolder}/node_modules/**/*.js",
@@ -55,12 +74,13 @@
   "editor.linkedEditing": true,
   "editor.minimap.enabled": false,
   "editor.quickSuggestions": {
-    "strings": true,
     "comments": true,
-    "other": true
+    "other": true,
+    "strings": true
   },
   "editor.rulers": [80],
   "editor.scrollBeyondLastLine": false,
+  "editor.suggestSelection": "first",
   //"editor.snippetSuggestions": "bottom",
   //"editor.suggestSelection": "first",
   "editor.tabSize": 2,
@@ -69,39 +89,44 @@
   "explorer.confirmDragAndDrop": false,
   "files.associations": {
     "*.html.eex": "html",
+    ".env*": "shellscript",
     ".env*-cmdrc": "json",
     ".svg": "html",
-    ".env*": "shellscript",
     "Dockerfile*": "dockerfile"
   },
+  "files.eol": "\n",
   "files.exclude": {
-    "**/__pycache__": true,
-    "**/_build": true,
-    "**/build": true,
-    "**/node_modules": true,
     "**/.DS_Store": true,
     "**/.elixir_ls": false,
     "**/.git": true,
     "**/.hg": true,
-    "**/.pyc": true,
-    "**/.svn": true,
-    "**/CVS": true,
-    "**/deps": true,
-    "**/.pytest_cache": true,
     "**/.mypy_cache": true,
-    "tags": true,
-    "**/.venv": true,
-    "**/coverage": true,
     "**/.next": true,
-    "**/yarn*": true
+    "**/.pyc": true,
+    "**/.pytest_cache": true,
+    "**/.svn": true,
+    "**/.venv": true,
+    "**/CVS": true,
+    "**/__pycache__": true,
+    "**/_build": true,
+    "**/build": true,
+    "**/coverage": true,
+    "**/deps": true,
+    "**/node_modules": true,
+    "**/yarn*": true,
+    "tags": true
   },
   "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
   "git.enabled": false,
   "javascript.referencesCodeLens.enabled": false,
   "javascript.referencesCodeLens.showOnAllFunctions": false,
   "js/ts.implicitProjectConfig.strictNullChecks": true,
   "npm.packageManager": "yarn",
+  "powershell.codeFormatting.useCorrectCasing": true,
+  "powershell.integratedConsole.showOnStartup": false,
   "python.formatting.provider": "black",
+  "scss.validate": false,
   "search.showLineNumbers": true,
   "settingsSync.ignoredSettings": [
     "editor.fontSize",
@@ -131,6 +156,7 @@
   "typescript.suggest.completeFunctionCalls": true,
   "typescript.surveys.enabled": false,
   "vscode-neovim.highlightGroups.highlights": {
+    "Conceal": "vim",
     "Directory": "vim",
     "IncSearch": {
       "backgroundColor": "theme.editor.findMatchBackground",
@@ -140,11 +166,10 @@
       "backgroundColor": "theme.editor.findMatchHighlightBackground",
       "borderColor": "theme.editor.findMatchHighlightBorder"
     },
+    "Substitute": "vim",
     "Visual": {
       "backgroundColor": "theme.editor.selectionBackground"
-    },
-    "Conceal": "vim",
-    "Substitute": "vim"
+    }
   },
   "vscode-neovim.neovimExecutablePaths.win32": "C:\\users\\kanmii\\.bin\\neovim\\bin\\nvim.exe",
   "vscode-neovim.useWSL": false,
@@ -152,42 +177,17 @@
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "window.openFilesInNewWindow": "on",
   "window.openFoldersInNewWindow": "on",
+  "workbench.activityBar.visible": false,
   "workbench.colorTheme": "Default Light+",
   "workbench.editor.untitled.hint": "hidden",
   "workbench.editorAssociations": [
     {
-      "viewType": "jupyter.notebook.ipynb",
-      "filenamePattern": "*.ipynb"
+      "filenamePattern": "*.ipynb",
+      "viewType": "jupyter.notebook.ipynb"
     }
   ],
   "workbench.iconTheme": "vscode-icons",
   "workbench.settings.useSplitJSON": true,
   "workbench.startupEditor": "newUntitledFile",
-  "zenMode.hideLineNumbers": false,
-  "editor.suggestSelection": "first",
-  "css.validate": true,
-  "scss.validate": false,
-  "[dart]": {
-    "editor.formatOnSave": true,
-    "editor.formatOnType": false,
-    "editor.rulers": [80],
-    "editor.selectionHighlight": false,
-    "editor.suggest.snippetsPreventQuickSuggestions": false,
-    "editor.suggestSelection": "first",
-    "editor.tabCompletion": "onlySnippets",
-    "editor.wordBasedSuggestions": false,
-    "editor.defaultFormatter": "Dart-Code.dart-code"
-  },
-  "[powershell]": {
-    "editor.defaultFormatter": "ms-vscode.powershell"
-  },
-  "files.trimTrailingWhitespace": true,
-  "powershell.codeFormatting.useCorrectCasing": true,
-  "powershell.integratedConsole.showOnStartup": false,
-  "dart.allowAnalytics": false,
-  "dart.flutterCreateOffline": true,
-  "files.eol": "\n",
-  "dart.flutterHotReloadOnSave": "always",
-  "workbench.activityBar.visible": false,
-  "dart.enableSnippets": false
+  "zenMode.hideLineNumbers": false
 }
