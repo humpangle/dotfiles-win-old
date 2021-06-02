@@ -140,6 +140,13 @@ call plug#begin('~\AppData\Local\nvim\autoload')
     " Quickly toggle maximaize a tab
     Plug 'szw/vim-maximizer'
     Plug 'vim-scripts/AutoComplPop'
+
+    " Dart/Flutter
+    " https://x-team.com/blog/neovim-flutter/
+    Plug 'dart-lang/dart-vim-plugin'
+    Plug 'thosakwe/vim-flutter'
+    Plug 'natebosch/vim-lsc'
+    Plug 'natebosch/vim-lsc-dart'
   else
     Plug 'asvetliakov/vim-easymotion'
   endif
