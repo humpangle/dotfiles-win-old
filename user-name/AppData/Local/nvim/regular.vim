@@ -41,7 +41,7 @@ nnoremap yoq :cclose<cr>
 
 " create the new directory am already working in
 nnoremap ,md :!mkdir -p %:h<cr><cr>
-nnoremap ,rm :!trash-put %:p<cr>:bdelete!<cr>
+nnoremap ,rm :!pwsh.exe -Command rm %:p<cr>:bdelete!<cr>
 " edit .bashrc file
 nnoremap ,. :e ~\Documents\PowerShell\Microsoft.PowerShell_profile.ps1<CR>
 nnoremap <leader>ee :Vexplore<CR>
