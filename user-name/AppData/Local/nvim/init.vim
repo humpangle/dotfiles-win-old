@@ -148,7 +148,8 @@ call plug#begin('~\AppData\Local\nvim\autoload')
     Plug 'natebosch/vim-lsc'
     Plug 'natebosch/vim-lsc-dart'
   else
-    Plug 'asvetliakov/vim-easymotion'
+    " Because 'asvetliakov/vim-easymotion' clashes with 'asvetliakov/vim-easymotion'
+    Plug 'humpangle/vim-easymotion-vscode'
   endif
 call plug#end()
 
