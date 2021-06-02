@@ -1,4 +1,5 @@
 language en_US
+set fileformat=unix
 
 if has("gui_running")
   "so $VIMRUNTIME/mswin.vim
@@ -26,7 +27,8 @@ let g:markdown_fenced_languages = [
   \ 'help',
   \ 'javascript',
   \ 'typescript',
-  \ 'css'
+  \ 'css',
+  \ 'dart',
 \]
 
 syntax enable
@@ -103,10 +105,13 @@ nnoremap <leader>nh :noh<CR>
 nnoremap <leader>rr :%s///g
 nnoremap <leader>rc :%s///gc
 
+" dos line endings to unix
+nnoremap ,du :!dos2unix %:p %:p<cr>
+
 """""""""""""""""""""""""""""""""""""
 " START EASY MOTION
 """""""""""""""""""""""""""""""""""""
-let g:EasyMotion_smartcase = 1
+" let g:EasyMotion_smartcase = 1
 """""""""""""""""""""""""""""""""""""
 " END EASY MOTION
 """""""""""""""""""""""""""""""""""""
