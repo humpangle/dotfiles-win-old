@@ -150,6 +150,10 @@ inoremap <expr> <CR> pumvisible() ? "<C-y>" : "<CR>"
 " right arrow also accepts suggestion
 inoremap <expr> <right> pumvisible() ? "<C-y>" : "<right>"
 
+" dos line endings to unix
+" https://sourceforge.net/projects/dos2unix
+nnoremap ,du :!dos2unix % %<cr>
+
 """""""""""""""""""""""""""""""""""""
 " START FUGITIVE
 """""""""""""""""""""""""""""""""""""

@@ -105,9 +105,6 @@ nnoremap <leader>nh :noh<CR>
 nnoremap <leader>rr :%s///g
 nnoremap <leader>rc :%s///gc
 
-" dos line endings to unix
-nnoremap ,du :!dos2unix %:p %:p<cr>
-
 """""""""""""""""""""""""""""""""""""
 " START EASY MOTION
 """""""""""""""""""""""""""""""""""""
