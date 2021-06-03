@@ -380,7 +380,7 @@ nnoremap mm :MaximizerToggle!<CR>
 """""""""""""""""""""""""""""""""""""
 " START THEME
 """""""""""""""""""""""""""""""""""""
-set background=dark
+set background=light
 colorscheme solarized8
 """""""""""""""""""""""""""""""""""""
 " END THEME
