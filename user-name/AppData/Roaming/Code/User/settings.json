@@ -52,7 +52,7 @@
   "cSpell.userWords": ["Multithreading", "neovim", "nvim", "semibold"],
   "css.validate": true,
   "dart.allowAnalytics": false,
-  "dart.enableSnippets": false,
+  "dart.enableSnippets": true,
   "dart.flutterCreateOffline": true,
   "dart.flutterHotReloadOnSave": "always",
   "debug.javascript.terminalOptions": {
@@ -81,7 +81,7 @@
   "editor.rulers": [80],
   "editor.scrollBeyondLastLine": false,
   "editor.suggestSelection": "first",
-  //"editor.snippetSuggestions": "bottom",
+  //"editor.snippetSuggestions": "top",
   //"editor.suggestSelection": "first",
   "editor.tabSize": 2,
   "elixirLS.enableTestLenses": true,
@@ -177,8 +177,7 @@
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "window.openFilesInNewWindow": "on",
   "window.openFoldersInNewWindow": "on",
-  "workbench.activityBar.visible": false,
-  "workbench.colorTheme": "Default Light+",
+  "workbench.colorTheme": "Gruvbox Dark Hard",
   "workbench.editor.untitled.hint": "hidden",
   "workbench.editorAssociations": [
     {
@@ -189,5 +188,6 @@
   "workbench.iconTheme": "vscode-icons",
   "workbench.settings.useSplitJSON": true,
   "workbench.startupEditor": "newUntitledFile",
-  "zenMode.hideLineNumbers": false
+  "zenMode.hideLineNumbers": false,
+  "workbench.activityBar.visible": false
 }
