@@ -124,31 +124,17 @@ call plug#begin('~\AppData\Local\nvim\autoload')
   Plug 'nelstrom/vim-visual-star-search'
 
   if !exists('g:vscode')
-    Plug 'junegunn/fzf'
-    Plug 'junegunn/fzf.vim'
-    Plug 'stsewd/fzf-checkout.vim'
     Plug 'lifepillar/vim-solarized8'
-    Plug 'tpope/vim-fugitive'
-    Plug 'tpope/vim-obsession'
     " A number of useful motions for the quickfix list, pasting and more.
     Plug 'tpope/vim-unimpaired'
     Plug 'tpope/vim-commentary'
-    Plug 'dhruvasagar/vim-prosession'
     Plug 'itchyny/lightline.vim'
-    Plug 'airblade/vim-gitgutter'
     Plug 'sbdchd/neoformat'
     Plug 'easymotion/vim-easymotion'
     Plug 'windwp/nvim-autopairs'
     " Quickly toggle maximaize a tab
     Plug 'szw/vim-maximizer'
     Plug 'vim-scripts/AutoComplPop'
-
-    " Dart/Flutter
-    " https://x-team.com/blog/neovim-flutter/
-    Plug 'dart-lang/dart-vim-plugin'
-    Plug 'thosakwe/vim-flutter'
-    Plug 'natebosch/vim-lsc'
-    Plug 'natebosch/vim-lsc-dart'
   else
     " Because 'asvetliakov/vim-easymotion' clashes with 'asvetliakov/vim-easymotion'
     Plug 'humpangle/vim-easymotion-vscode'
