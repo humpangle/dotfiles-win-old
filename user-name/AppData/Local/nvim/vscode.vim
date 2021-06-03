@@ -112,3 +112,9 @@ autocmd FileType markdown nnoremap <silent> <leader>mv <Cmd>:call VSCodeNotify('
 " ctrl+shift+v
 " !notebookEditorFocused && editorLangId == 'markdown'
 autocmd FileType markdown nnoremap <silent> <leader>ms <Cmd>:call VSCodeNotify('markdown.showPreview')<CR>
+
+call plug#begin('~\AppData\Local\nvim\vscode')
+  Plug 'tpope/vim-surround'
+  Plug 'nelstrom/vim-visual-star-search'
+  Plug 'asvetliakov/vim-easymotion'
+call plug#end()

@@ -233,15 +233,6 @@ nnoremap mm :MaximizerToggle!<CR>
 " END VIM-MAXIMIZER
 """""""""""""""""""""""""""""""""""""
 
-"""""""""""""""""""""""""""""""""""""
-" START THEME
-"""""""""""""""""""""""""""""""""""""
-set background=light
-colorscheme solarized8
-"""""""""""""""""""""""""""""""""""""
-" END THEME
-"""""""""""""""""""""""""""""""""""""
-
 augroup MyMiscGroupRegular
   au!
 
@@ -328,3 +319,28 @@ function! Renumber() range
     endtry
   endfor
 endfunction
+
+call plug#begin('~\AppData\Local\nvim\autoload')
+  Plug 'tpope/vim-surround'
+  Plug 'nelstrom/vim-visual-star-search'
+  Plug 'lifepillar/vim-solarized8'
+  " A number of useful motions for the quickfix list, pasting and more.
+  Plug 'tpope/vim-unimpaired'
+  Plug 'tpope/vim-commentary'
+  Plug 'itchyny/lightline.vim'
+  Plug 'sbdchd/neoformat'
+  Plug 'easymotion/vim-easymotion'
+  Plug 'windwp/nvim-autopairs'
+  " Quickly toggle maximaize a tab
+  Plug 'szw/vim-maximizer'
+  Plug 'vim-scripts/AutoComplPop'
+call plug#end()
+
+"""""""""""""""""""""""""""""""""""""
+" START THEME
+"""""""""""""""""""""""""""""""""""""
+set background=light
+colorscheme solarized8
+"""""""""""""""""""""""""""""""""""""
+" END THEME
+"""""""""""""""""""""""""""""""""""""
