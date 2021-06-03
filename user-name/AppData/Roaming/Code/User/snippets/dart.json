@@ -159,13 +159,7 @@
   },
   "Custom Scroll View": {
     "prefix": "customscrollview_widget",
-    "body": [
-      "CustomScrollView(",
-      "  slivers: [",
-      "  ${0:}",
-      "  ],",
-      "),"
-    ],
+    "body": ["CustomScrollView(", "  slivers: [", "  ${0:}", "  ],", "),"],
     "description": "Creates a `ScrollView` that creates custom scroll effects using slivers."
   },
   "Stream Builder": {
@@ -447,8 +441,8 @@
     ],
     "description": "class definition"
   },
-  "container Widget may be rounded": {
-    "prefix": "container_widget",
+  "container Widget Full": {
+    "prefix": "container_widget_full",
     "body": [
       "Container(",
       "\t//margin: const EdgeInsets.symmetric(vertical: 5.0) ,",
@@ -507,7 +501,7 @@
       "\tradius: 20.0,",
       "\tbackgroundColor: Colors.orange,",
       "\t// provide either backgroundImage or child, but not both",
-      "\t//backgroundImage: NetworkImage('url),",
+      "\t//backgroundImage: NetworkImage('url'),",
       "\t//child: const Text('AH'),",
       ")"
     ],
@@ -578,5 +572,10 @@
       ")"
     ],
     "description": "TextButton Widget"
+  },
+  "Container Widget min": {
+    "prefix": "container_widget_min",
+    "body": ["Container(", "\tcolor: Colors.$1,", "\tchild: null,", ")"],
+    "description": "Container Widget min"
   }
 }
