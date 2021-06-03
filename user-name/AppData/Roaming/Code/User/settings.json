@@ -69,7 +69,7 @@
   "editor.fontFamily": "CaskaydiaCove NF",
   "editor.fontLigatures": true,
   "editor.fontSize": 16,
-  "editor.formatOnSave": false,
+  "editor.formatOnSave": true,
   "editor.lineNumbers": "relative",
   "editor.linkedEditing": true,
   "editor.minimap.enabled": false,
