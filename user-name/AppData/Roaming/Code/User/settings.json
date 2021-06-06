@@ -19,7 +19,8 @@
     "editor.wordBasedSuggestions": false,
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
-    "files.trimTrailingWhitespace": true
+    "files.trimTrailingWhitespace": true,
+    "editor.defaultFormatter": "JakeBecker.elixir-ls"
   },
   "[powershell]": {
     "editor.defaultFormatter": "ms-vscode.powershell"
@@ -177,7 +178,7 @@
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "window.openFilesInNewWindow": "on",
   "window.openFoldersInNewWindow": "on",
-  "workbench.colorTheme": "Gruvbox Dark Hard",
+  "workbench.colorTheme": "Default Light+",
   "workbench.editor.untitled.hint": "hidden",
   "workbench.editorAssociations": [
     {

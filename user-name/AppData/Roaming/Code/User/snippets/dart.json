@@ -134,11 +134,12 @@
     "prefix": "listviewbuilder",
     "body": [
       "ListView.builder(",
+      "  // padding: ,",
       "  itemCount: ${1:1},",
       "  itemBuilder: (BuildContext context, int index) {",
-      "  return ${2:};",
+      "  return ${2:Container()};",
       " },",
-      "),"
+      ")"
     ],
     "description": "Creates a scrollable, linear array of widgets that are created on demand.Providing a non-null `itemCount` improves the ability of the [ListView] to estimate the maximum scroll extent."
   },
@@ -148,18 +149,18 @@
       "ListView.separated(",
       "  itemCount: ${1:1},",
       "  separatorBuilder: (BuildContext context, int index) {",
-      "  return ${2:};",
+      "  return ${2:Divider()};",
       " },",
       "  itemBuilder: (BuildContext context, int index) {",
-      "  return ${3:};",
+      "  return ${3:Container()};",
       " },",
-      "),"
+      ")"
     ],
     "description": "Creates a fixed-length scrollable linear array of list 'items' separated by list item 'separators'."
   },
   "Custom Scroll View": {
     "prefix": "customscrollview_widget",
-    "body": ["CustomScrollView(", "  slivers: [", "  ${0:}", "  ],", "),"],
+    "body": ["CustomScrollView(", "  slivers: [", "  ${0:}", "  ],", ")"],
     "description": "Creates a `ScrollView` that creates custom scroll effects using slivers."
   },
   "Stream Builder": {
@@ -173,7 +174,7 @@
       "      child: ${3:child},",
       "    );",
       "  },",
-      "),"
+      ")"
     ],
     "description": "Creates a new `StreamBuilder` that builds itself based on the latest snapshot of interaction with the specified `stream`"
   },
@@ -186,7 +187,7 @@
       "  builder: (BuildContext context, Widget child) {",
       "    return ${3:};",
       "  },",
-      "),"
+      ")"
     ],
     "description": "Creates an Animated Builder. The widget specified to `child` is passed to the `builder` "
   },
@@ -197,7 +198,7 @@
       "  builder: (BuildContext context, setState) {",
       "    return ${0:};",
       "  },",
-      "),"
+      ")"
     ],
     "description": "Creates a widget that both has state and delegates its build to a callback. Useful for rebuilding specific sections of the widget tree."
   },
@@ -210,7 +211,7 @@
       "      child: ${3:child},",
       "    );",
       "  },",
-      "),"
+      ")"
     ],
     "description": "Creates a builder which allows for the orientation of the device to be specified and referenced"
   },
@@ -221,7 +222,7 @@
       "  builder: (BuildContext context, BoxConstraints constraints) {",
       "    return ${0:};",
       "  },",
-      "),"
+      ")"
     ],
     "description": "Similar to the Builder widget except that the framework calls the builder function at layout time and provides the parent widget's constraints."
   },
@@ -233,7 +234,7 @@
       "  child: Column(",
       "    ${0:}",
       "  ),",
-      "),"
+      ")"
     ],
     "description": "Creates a scroll view with a single child"
   },
@@ -246,7 +247,7 @@
       "  builder: (BuildContext context, AsyncSnapshot snapshot) {",
       "    return ${3:};",
       "  },",
-      "),"
+      ")"
     ],
     "description": "Creates a Future Builder. This builds itself based on the latest snapshot of interaction with a Future."
   },
@@ -517,7 +518,7 @@
       "\t\t\tradius: 17.0,",
       "\t\t\tbackgroundColor: Colors.orange,",
       "\t// provide either backgroundImage or child, but not both",
-      "\t//backgroundImage: NetworkImage('url),",
+      "\t//backgroundImage: NetworkImage('url'),",
       "\t//child: const Text('AH'),",
 
       "\t),",
@@ -554,28 +555,120 @@
     ],
     "description": "text Widget"
   },
-  "TextButton Widget": {
-    "prefix": "textbutton_widget",
+  "TextButton Icon Widget": {
+    "prefix": "textbuttonicon_widget",
     "body": [
       "TextButton.icon(",
       "\t// onLongPress: ,",
       "\tonPressed: () {",
-      "\t\t\t// required",
+      "\t\t\t",
       "\t},",
-      "\tlabel: Text('required'), // required",
-      "\ticon: const Icon( // required",
+      "\tlabel: Text('required'), ",
+      "\ticon: const Icon( ",
       "\t\t\tIcons.videocam,",
       "\t\t\tcolor: Colors.red,",
       "\t),",
-      "\t// style: ,// see ButtonStyle",
+      "\t// style is a subclass of ButtonStyle",
+      "\t// style: ,// TextButton.styleFrom()",
       "\t// autofocus: true/false",
       ")"
     ],
-    "description": "TextButton Widget"
+    "description": "TextButton Icon Widget"
   },
   "Container Widget min": {
     "prefix": "container_widget_min",
     "body": ["Container(", "\tcolor: Colors.$1,", "\tchild: null,", ")"],
     "description": "Container Widget min"
+  },
+  "IconButton widget": {
+    "prefix": "iconbutton-widget",
+    "body": [
+      "Container(",
+      "\tmargin: const EdgeInsets.symmetric(horizontal: 5.0),",
+      "\tdecoration: BoxDecoration(",
+      "\t\t\tshape: BoxShape.circle,",
+      "\t\t\tcolor: Colors.grey[200],",
+      "\t),",
+      "\tchild: IconButton(",
+      "\t\t\tonPressed: () {},",
+      "\t\t\ticon: Icon(MdiIcons.facebookMessenger),",
+      "\t\t\ticonSize: 30,",
+      "\t\t\tcolor: Colors.black,",
+      "\t\t\t//padding: ,",
+      "\t\t\t//alignment: ,",
+      "\t\t\t//splashColor: ,",
+      "\t),",
+      ")"
+    ],
+    "description": "IconButton widget"
+  },
+  "TextField Widget": {
+    "prefix": "textfield_widget",
+    "body": [
+      "TextField(",
+      "\tdecoration: InputDecoration(",
+      "\t\t\tlabelText: \"${1:Placeholder}\",",
+      "\t\t\t// border: OutlineInputBorder()",
+      "\t),",
+      ")$0"
+    ],
+    "description": "TextField Widget"
+  },
+  "SliverAppBar Widget": {
+    "prefix": "sliverappbar_widget",
+    "body": [
+      "SliverAppBar(",
+      "\tbackgroundColor: Colors.white,",
+      "\ttitle: Text(",
+      "\t\t\t'${1:required}',",
+      "\t\t\tstyle: TextStyle(",
+      "\t\t\t\t\t\t\tcolor: Colors.blue, fontSize: 30, letterSpacing: -1.2),",
+      "\t),",
+      "\tactions: [",
+      "\t\t\tIconButton(",
+      "\t\t\t\t\t\t\tonPressed: () {},",
+      "\t\t\t\t\t\t\ticon: Icon(",
+      "\t\t\t\t\t\t\t\t\tMdiIcons.facebookMessenger,",
+      "\t\t\t\t\t\t\t\t\tcolor: Colors.black,",
+      "\t\t\t\t\t\t\t))",
+      "\t],",
+      ")"
+    ],
+    "description": "SliverAppBar Widget"
+  },
+  "ListTile widget": {
+    "prefix": "listtile_widget",
+    "body": [
+      "ListTile(",
+      "\t// leading: icon,",
+      "\ttitle: Text('widget'),",
+      "\tsubtitle: Text('widget'),",
+      "\t// isThreeLine: true,",
+      "\t// dense: true,",
+      "\t// trailing: icon,",
+      "\t// onTap: (){},",
+      "\t// onLongPress: () {},",
+      "\t// enabled: false,",
+      "\t// selected: true,",
+      ")"
+    ],
+    "description": "ListTile Widget"
+  },
+  "ListView Widget": {
+    "prefix": "listview_widget",
+    "body": [
+      "ListView(",
+      "\tchildren: [",
+      "\t\t\t//",
+      "\t],",
+      "\tscrollDirection: Axis.horizontal,",
+      "\t// reverse: true,",
+      "\t// physics: NeverScrollableScrollPhysics(),",
+      "\t// offscreen? garbage collect or cacheExtent",
+      "\t// addAutomaticKeepAlives: false,",
+      "\t// cacheExtent: 100,",
+      ")"
+    ],
+    "description": "ListView Widget"
   }
 }
