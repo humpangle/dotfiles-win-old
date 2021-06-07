@@ -105,6 +105,7 @@ nnoremap <silent> <leader>do <Cmd>:call VSCodeNotify('workbench.debug.action.tog
 " MOBILE APP DEVELOPMENT
 nnoremap <silent> <leader>hR <Cmd>:call VSCodeNotify('flutter.hotRestart')<CR>
 nnoremap <silent> <leader>hr <Cmd>:call VSCodeNotify('flutter.hotReload')<CR>
+nnoremap <silent> <leader>fv <Cmd>:call VSCodeNotify('workbench.action.toggleFullScreen')<CR>
 
 " ctrl+k v
 " !notebookEditorFocused && editorLangId == 'markdown'

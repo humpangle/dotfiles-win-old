@@ -451,7 +451,7 @@
       "\t//height: , // double.infinity,",
       "\t//width: ,",
       "\tdecoration: BoxDecoration(",
-      "\t\t\t//gradient: ,",
+      "\t\t\t//gradient: LinearGradient(colors: []),",
       "\t\t\t//borderRadius: BorderRadius.circular(12.0),",
       "\t\t\t//shape: BoxShape.circle,",
       "\t\t\t//color: Colors.orange,",
@@ -459,9 +459,14 @@
       "\t\t\t//   image: NetworkImage('url'),",
       "\t\t\t//   fit: BoxFit.cover,",
       "\t\t\t// ),",
-      "\t\t\t// border: Border.all(",
+      "\t\t\t// border: const Border.all(",
       "\t\t\t//   color: Colors.black,",
       "\t\t\t//   width: 8,",
+      "\t\t\t// ),",
+      "\t\t\t// boxShadow: const BoxShadow(",
+      "\t\t\t//   color: Colors.black,",
+      "\t\t\t//   offset: Offset(0, 2),",
+      "\t\t\t//   blurRadius: 4,",
       "\t\t\t// ),",
       "\t\t\t),",
       "\tchild: null,",
@@ -606,8 +611,10 @@
     "prefix": "textfield_widget",
     "body": [
       "TextField(",
+      "\t//decoration: InputDecoration.collapsed( // removes the input border",
       "\tdecoration: InputDecoration(",
-      "\t\t\tlabelText: \"${1:Placeholder}\",",
+      "\t\t\thintText: \"${1:Placeholder}\",",
+      "\t\t\tlabelText: \"${1:label}\",",
       "\t\t\t// border: OutlineInputBorder()",
       "\t),",
       ")$0"
@@ -619,6 +626,9 @@
     "body": [
       "SliverAppBar(",
       "\tbackgroundColor: Colors.white,",
+      "\tbrightness: Brightness.light,",
+      "\tfloating: true,",
+      "\tcenterTitle: false,",
       "\ttitle: Text(",
       "\t\t\t'${1:required}',",
       "\t\t\tstyle: TextStyle(",
@@ -670,5 +680,20 @@
       ")"
     ],
     "description": "ListView Widget"
+  },
+  "LinearGradient def": {
+    "prefix": "lineargradient_def",
+    "body": [
+      "LinearGradient(",
+      "\tbegin: Alignment.center,",
+      "\t // end: Alignment(0.8, 0.0), // see wiki for coord system",
+      "\tend: Alignment.bottomCenter,",
+      "\tcolors: [",
+      "\t\t\tColors.black26,",
+      "\t\t\tColors.transparent,",
+      "\t// stops: [], // equals len colors",
+      "])"
+    ],
+    "description": "LinearGradient definition"
   }
 }
