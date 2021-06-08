@@ -1,7 +1,4 @@
 {
-  "[csharp]": {
-    "editor.defaultFormatter": "ms-dotnettools.csharp"
-  },
   "[dart]": {
     "editor.defaultFormatter": "Dart-Code.dart-code",
     "editor.formatOnSave": true,
@@ -14,13 +11,13 @@
     "editor.wordBasedSuggestions": false
   },
   "[elixir]": {
+    "editor.defaultFormatter": "JakeBecker.elixir-ls",
     "editor.formatOnType": false,
     "editor.trimAutoWhitespace": false,
     "editor.wordBasedSuggestions": false,
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
-    "files.trimTrailingWhitespace": true,
-    "editor.defaultFormatter": "JakeBecker.elixir-ls"
+    "files.trimTrailingWhitespace": true
   },
   "[powershell]": {
     "editor.defaultFormatter": "ms-vscode.powershell"
@@ -66,6 +63,9 @@
   "debug.toolBarLocation": "docked",
   "editor.accessibilitySupport": "off",
   "editor.autoClosingQuotes": "always",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.stylelint": true
+  },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.fontFamily": "CaskaydiaCove NF",
   "editor.fontLigatures": true,
@@ -123,6 +123,7 @@
   "javascript.referencesCodeLens.enabled": false,
   "javascript.referencesCodeLens.showOnAllFunctions": false,
   "js/ts.implicitProjectConfig.strictNullChecks": true,
+  "less.validate": false,
   "npm.packageManager": "yarn",
   "powershell.codeFormatting.useCorrectCasing": true,
   "powershell.integratedConsole.showOnStartup": false,
@@ -178,6 +179,7 @@
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "window.openFilesInNewWindow": "on",
   "window.openFoldersInNewWindow": "on",
+  "workbench.activityBar.visible": false,
   "workbench.colorTheme": "Default Light+",
   "workbench.editor.untitled.hint": "hidden",
   "workbench.editorAssociations": [
@@ -189,6 +191,5 @@
   "workbench.iconTheme": "vscode-icons",
   "workbench.settings.useSplitJSON": true,
   "workbench.startupEditor": "newUntitledFile",
-  "zenMode.hideLineNumbers": false,
-  "workbench.activityBar.visible": false
+  "zenMode.hideLineNumbers": false
 }
