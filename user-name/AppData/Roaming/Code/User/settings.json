@@ -69,7 +69,7 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.fontFamily": "CaskaydiaCove NF",
   "editor.fontLigatures": true,
-  "editor.fontSize": 16,
+  "editor.fontSize": 15.2,
   "editor.formatOnSave": true,
   "editor.lineNumbers": "relative",
   "editor.linkedEditing": true,

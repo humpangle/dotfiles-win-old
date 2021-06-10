@@ -25,7 +25,6 @@ nnoremap <c-left> :call VSCodeNotify('workbench.action.increaseViewSize')<CR>
 nnoremap <c-right> :call VSCodeNotify('workbench.action.decreaseViewSize')<CR>
 
 nnoremap ,rm :call VSCodeNotify('deleteFile')<cr>
-nnoremap <leader>ee :call VSCodeNotify('workbench.files.action.focusFilesExplorer')<CR>
 nnoremap ,ec :call VSCodeNotify('workbench.action.openSettings')<cr>
 
 " TO MOVE LINES up/down
