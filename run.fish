@@ -48,7 +48,7 @@ function sync_unison
     echo -e "\n\n$line *DONE* syncing $source $line\n\n"
   end
 
-  for filename in 'lua' 'init.vin' 'regular.vim' 'vscode.vim'
+  for filename in 'lua' 'init.vim' 'regular.vim' 'vscode.vim'
     set source "./user-name/AppData/Local/nvim/$filename"
     echo -e "$line Syncing $source $line\n\n"
 

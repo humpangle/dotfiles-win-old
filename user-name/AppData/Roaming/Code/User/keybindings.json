@@ -1,16 +1,6 @@
 // Place your key bindings in this file to overwrite the defaults
 [
   {
-    "key": "shift+space",
-    "command": "whichkey.show",
-    "when": "editorTextFocus"
-  },
-  {
-    "key": "shift+space",
-    "command": "whichkey.show",
-    "when": "terminalFindFocused && terminalProcessSupported || terminalFocus && terminalProcessSupported"
-  },
-  {
     "key": "alt+down",
     "command": "editor.action.moveLinesDownAction",
     "when": "editorTextFocus && !editorReadonly"
@@ -70,5 +60,36 @@
     "key": "ctrl+w",
     "command": "workbench.action.closeWindow",
     "when": "!editorIsOpen && !multipleEditorGroups"
+  },
+  {
+    "key": "ctrl+r ctrl+r",
+    "command": "flutter.hotReload",
+    "when": "dart-code:anyFlutterProjectLoaded && dart-code:service.reloadSources && inDebugMode"
+  },
+  {
+    "key": "ctrl+alt+r",
+    "command": "flutter.hotRestart",
+    "when": "dart-code:anyFlutterProjectLoaded && dart-code:service.reloadSources && inDebugMode"
+  },
+  {
+    "key": "ctrl+alt+n",
+    "command": "-namespaceResolver.highlightNotImported",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+left",
+    "command": "workbench.action.focusLeftGroup"
+  },
+  {
+    "key": "ctrl+k ctrl+left",
+    "command": "-workbench.action.focusLeftGroup"
+  },
+  {
+    "key": "ctrl+shift+right",
+    "command": "workbench.action.focusRightGroup"
+  },
+  {
+    "key": "ctrl+k ctrl+right",
+    "command": "-workbench.action.focusRightGroup"
   }
 ]

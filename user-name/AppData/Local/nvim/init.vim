@@ -119,6 +119,27 @@ augroup MyMiscGroup
   au TextYankPost * silent! lua vim.highlight.on_yank { higroup='IncSearch', timeout=200 }
 augroup END
 
+call plug#begin('~\AppData\Local\nvim\autoload')
+  Plug 'tpope/vim-surround'
+  Plug 'nelstrom/vim-visual-star-search'
+
+  if !exists('g:vscode')
+    Plug 'lifepillar/vim-solarized8'
+    " A number of useful motions for the quickfix list, pasting and more.
+    Plug 'tpope/vim-unimpaired'
+    Plug 'tpope/vim-commentary'
+    Plug 'itchyny/lightline.vim'
+    Plug 'sbdchd/neoformat'
+    Plug 'easymotion/vim-easymotion'
+    Plug 'windwp/nvim-autopairs'
+    " Quickly toggle maximaize a tab
+    Plug 'szw/vim-maximizer'
+    Plug 'vim-scripts/AutoComplPop'
+  else
+    Plug 'asvetliakov/vim-easymotion', { 'as': 'vim-easymotion-vscode' }
+  endif
+call plug#end()
+
 if !exists('g:vscode')
   so ~\AppData\Local\nvim\regular.vim
 else

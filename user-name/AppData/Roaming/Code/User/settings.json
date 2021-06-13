@@ -1,9 +1,19 @@
 {
+  "[blade]": {
+    "editor.defaultFormatter": "shufo.vscode-blade-formatter",
+    "editor.formatOnSave": true
+  },
+  "[css]": {
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2
+  },
   "[dart]": {
     "editor.defaultFormatter": "Dart-Code.dart-code",
     "editor.formatOnSave": true,
     "editor.formatOnType": false,
-    "editor.rulers": [80],
+    "editor.rulers": [
+      80
+    ],
     "editor.selectionHighlight": false,
     "editor.suggest.snippetsPreventQuickSuggestions": false,
     "editor.suggestSelection": "first",
@@ -19,6 +29,15 @@
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true
   },
+  "[json]": {
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2
+  },
+  "[php]": {
+    "editor.defaultFormatter": "bmewburn.vscode-intelephense-client",
+    "editor.formatOnSave": false,
+    "editor.tabSize": 4
+  },
   "[powershell]": {
     "editor.defaultFormatter": "ms-vscode.powershell"
   },
@@ -28,6 +47,10 @@
   },
   "[shellscript]": {
     "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "[vue]": {
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2
   },
   "advancedNewFile.exclude": {
     "**/coverage": true,
@@ -44,11 +67,16 @@
     "node_modules": true,
     "node_modules_electron": true,
     "rls": true,
-    "target": true
+    "target": true,
+    "vendor": true
   },
   "cSpell.language": "en,de",
-  "cSpell.userWords": ["Multithreading", "neovim", "nvim", "semibold"],
-  //"css.validate": false,
+  "cSpell.userWords": [
+    "Multithreading",
+    "neovim",
+    "nvim",
+    "semibold"
+  ],
   "dart.allowAnalytics": false,
   "dart.enableSnippets": true,
   "dart.flutterCreateOffline": true,
@@ -69,8 +97,7 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.fontFamily": "CaskaydiaCove NF",
   "editor.fontLigatures": true,
-  "editor.fontSize": 15.2,
-  "editor.formatOnSave": true,
+  "editor.fontSize": 15,
   "editor.lineNumbers": "relative",
   "editor.linkedEditing": true,
   "editor.minimap.enabled": false,
@@ -79,7 +106,9 @@
     "other": true,
     "strings": true
   },
-  "editor.rulers": [80],
+  "editor.rulers": [
+    80
+  ],
   "editor.scrollBeyondLastLine": false,
   "editor.suggestSelection": "first",
   //"editor.snippetSuggestions": "top",
@@ -87,11 +116,14 @@
   "editor.tabSize": 2,
   "elixirLS.enableTestLenses": true,
   "emmet.includeLanguages": {
+    "blade": "html",
+    "php": "html",
     "postcss": "css"
   },
   "eslint.packageManager": "yarn",
   "explorer.confirmDragAndDrop": false,
   "files.associations": {
+    "*.blade.php": "php",
     "*.html.eex": "html",
     ".env*": "shellscript",
     ".env*-cmdrc": "json",
@@ -126,12 +158,10 @@
   "javascript.referencesCodeLens.enabled": false,
   "javascript.referencesCodeLens.showOnAllFunctions": false,
   "js/ts.implicitProjectConfig.strictNullChecks": true,
-  //"less.validate": false,
   "npm.packageManager": "yarn",
   "powershell.codeFormatting.useCorrectCasing": true,
   "powershell.integratedConsole.showOnStartup": false,
   "python.formatting.provider": "black",
-  // "scss.validate": false,
   "search.showLineNumbers": true,
   "settingsSync.ignoredSettings": [
     "editor.fontSize",
@@ -141,7 +171,6 @@
     "editor.fontFamily"
   ],
   "settingsSync.keybindingsPerPlatform": false,
-  //"stylelint.enable": false,
   "stylelint.packageManager": "yarn",
   "tailwindCSS.colorDecorators": true,
   "tailwindCSS.emmetCompletions": true,
@@ -150,8 +179,14 @@
       "(?:classnames|classNames|cn)\\(([^)]*)\\)",
       "(?:\"|'|`)([^(?:\"|'|`)]*)(?:\"|'|`)"
     ],
-    ["\\[.+\\]:\\s*`([^)]*)\\`", "([^(?:\"|'|`)]+)\\s*"]
+    [
+      "\\[.+\\]:\\s*`([^)]*)\\`",
+      "([^(?:\"|'|`)]+)\\s*"
+    ]
   ],
+  "tailwindCSS.includeLanguages": {
+    "php": "html"
+  },
   "telemetry.enableCrashReporter": false,
   "telemetry.enableTelemetry": false,
   "terminal.integrated.tabs.enabled": true,
@@ -160,6 +195,8 @@
   "typescript.referencesCodeLens.enabled": false,
   "typescript.suggest.completeFunctionCalls": true,
   "typescript.surveys.enabled": false,
+  "vetur.experimental.templateInterpolationService": true,
+  "vetur.validation.templateProps": true,
   "vscode-neovim.highlightGroups.highlights": {
     "Conceal": "vim",
     "Directory": "vim",

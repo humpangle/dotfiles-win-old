@@ -7,8 +7,8 @@
       "class ${1:name} extends StatelessWidget {",
       "  //const ${1:name}({Key? key}) : super(key: key);\n",
       "  @override",
-      "  Widget build(BuildContext context) {",
-      "    return Container(height: 60.0, color: Colors.orange);",
+      "  Widget build(BuildContext context,) {",
+      "    return Container(height: 60.0, color: Colors.orange,);",
       "  }",
       "}"
     ],
@@ -25,7 +25,7 @@
       "}\n",
       "class _${1:index}State extends State<${1:index}> {",
       "  @override",
-      "  Widget build(BuildContext context) {",
+      "  Widget build(BuildContext context,) {",
       "    return Container(height: 60.0, color: Colors.orange);",
       "  }",
       "}"
@@ -134,9 +134,10 @@
     "prefix": "listviewbuilder",
     "body": [
       "ListView.builder(",
-      "  // padding: ,",
+      "  //padding: EdgeInsets,",
+      "  //scrollDirection: Axis, //.horizontal,",
       "  itemCount: ${1:1},",
-      "  itemBuilder: (BuildContext context, int index) {",
+      "  itemBuilder: (BuildContext context, int index,) {",
       "  return ${2:Container()};",
       " },",
       ")"
@@ -148,10 +149,10 @@
     "body": [
       "ListView.separated(",
       "  itemCount: ${1:1},",
-      "  separatorBuilder: (BuildContext context, int index) {",
+      "  separatorBuilder: (BuildContext context, int index,) {",
       "  return ${2:Divider()};",
       " },",
-      "  itemBuilder: (BuildContext context, int index) {",
+      "  itemBuilder: (BuildContext context, int index,) {",
       "  return ${3:Container()};",
       " },",
       ")"
@@ -184,7 +185,7 @@
       "AnimatedBuilder(",
       "  animation: ${1:animation},",
       "  child: ${2:null},",
-      "  builder: (BuildContext context, Widget child) {",
+      "  builder: (BuildContext context, Widget child,) {",
       "    return ${3:};",
       "  },",
       ")"
@@ -452,11 +453,14 @@
       "\t//width: ,",
       "\tdecoration: BoxDecoration(",
       "\t\t\t//gradient: LinearGradient(colors: []),",
+      "\t\t\t//  use either borderRadius or shape: BoxShape.circular but not both",
       "\t\t\t//borderRadius: BorderRadius.circular(12.0),",
+      "\t\t\t// BoxShape.circle applies borderRadius 50%",
       "\t\t\t//shape: BoxShape.circle,",
       "\t\t\t//color: Colors.orange,",
       "\t\t\t// image: DecorationImage( // CachedNetworkImageProvider",
-      "\t\t\t//   image: NetworkImage('url'),",
+      "\t\t\t//   image: NetworkImage('url'), //AssetImage()",
+      "\t\t\t//   image should stretch to fill container",
       "\t\t\t//   fit: BoxFit.cover,",
       "\t\t\t// ),",
       "\t\t\t// border: const Border.all(",
@@ -507,7 +511,7 @@
       "\tradius: 20.0,",
       "\tbackgroundColor: Colors.orange,",
       "\t// provide either backgroundImage or child, but not both",
-      "\t//backgroundImage: NetworkImage('url'),",
+      "\t//backgroundImage: NetworkImage('url'), //AssetImage()",
       "\t//child: const Text('AH'),",
       ")"
     ],
@@ -523,7 +527,7 @@
       "\t\t\tradius: 17.0,",
       "\t\t\tbackgroundColor: Colors.orange,",
       "\t// provide either backgroundImage or child, but not both",
-      "\t//backgroundImage: NetworkImage('url'),",
+      "\t//backgroundImage: NetworkImage('url'), //AssetImage()",
       "\t//child: const Text('AH'),",
 
       "\t),",
@@ -554,6 +558,7 @@
       "\t\t\t//fontFamily:",
       "\t\t\t//height: // line height:final height of text = fontSize * line height",
       "\t),",
+      "\t// the following 2 prevent text from overflowing",
       "\t//maxLines: 2,",
       "\t//overflow: TextOverflow.ellipsis,",
       ")"
@@ -588,22 +593,17 @@
   "IconButton widget": {
     "prefix": "iconbutton-widget",
     "body": [
-      "Container(",
-      "\tmargin: const EdgeInsets.symmetric(horizontal: 5.0),",
-      "\tdecoration: BoxDecoration(",
-      "\t\t\tshape: BoxShape.circle,",
-      "\t\t\tcolor: Colors.grey[200],",
-      "\t),",
-      "\tchild: IconButton(",
+      "\tIconButton(",
       "\t\t\tonPressed: () {},",
+      "\t\t\t  // this padding value causes the icon to be centered in parent container,",
+      "\t\t\tpadding: EdgeInsets.zero,",
+      "\t\t\t//padding: ,",
       "\t\t\ticon: Icon(MdiIcons.facebookMessenger),",
       "\t\t\ticonSize: 30,",
       "\t\t\tcolor: Colors.black,",
-      "\t\t\t//padding: ,",
       "\t\t\t//alignment: ,",
       "\t\t\t//splashColor: ,",
-      "\t),",
-      ")"
+      "\t),"
     ],
     "description": "IconButton widget"
   },
@@ -632,7 +632,7 @@
       "\ttitle: Text(",
       "\t\t\t'${1:required}',",
       "\t\t\tstyle: TextStyle(",
-      "\t\t\t\t\t\t\tcolor: Colors.blue, fontSize: 30, letterSpacing: -1.2),",
+      "\t\t\t\t\t\t\tcolor: Colors.blue, fontSize: 30, letterSpacing: -1.2,),",
       "\t),",
       "\tactions: [",
       "\t\t\tIconButton(",
@@ -640,7 +640,7 @@
       "\t\t\t\t\t\t\ticon: Icon(",
       "\t\t\t\t\t\t\t\t\tMdiIcons.facebookMessenger,",
       "\t\t\t\t\t\t\t\t\tcolor: Colors.black,",
-      "\t\t\t\t\t\t\t))",
+      "\t\t\t\t\t\t\t),),",
       "\t],",
       ")"
     ],
@@ -695,5 +695,149 @@
       "])"
     ],
     "description": "LinearGradient definition"
+  },
+  "OutlinedButton Icon Widget": {
+    "prefix": "outlinedbuttonicon_widget",
+    "body": [
+      "OutlinedButton.icon(",
+      "\tonPressed: () {},",
+      "\ticon: ShaderMask(",
+      "\t\t\tshaderCallback: (rect) {",
+      "\t\t\t\t\treturn _Pallette.createRoomGradient.createShader(",
+      "\t\t\t\t\t\t\trect,",
+      "\t\t\t\t\t);",
+      "\t\t\t},",
+      "\t\t\tchild: Icon(",
+      "\t\t\t\t\tIcons.video_call,",
+      "\t\t\t\t\tsize: 35,",
+      "\t\t\t\t\tcolor: Colors.white,",
+      "\t\t\t),",
+      "\t),",
+      "\tlabel: Text(",
+      "\t\t\t'Create \\nRooms',",
+      "\t),",
+      "\tstyle: OutlinedButton.styleFrom(",
+      "\t\t\tside: BorderSide(",
+      "\t\t\t\t\twidth: 3,",
+      "\t\t\t\t\tcolor: const Color(0xFF82B1FF), // Colors.blueAccent[100]",
+      "\t\t\t),",
+      "\t\t\tshape: StadiumBorder(),",
+      "\t),",
+      ")"
+    ],
+    "description": "OutlinedButton Icon Widget"
+  },
+  "final Widget x": {
+    "prefix": "fwx",
+    "body": ["final Widget x = $1 ;"],
+    "description": "final Widget x"
+  },
+  "SliverList Widget": {
+    "prefix": "sliverlist_widget",
+    "body": [
+      "SliverList(",
+      "\tdelegate: SliverChildBuilderDelegate(",
+      "\t\t\t(",
+      "\t\t\t\t\tcontext,",
+      "\t\t\t\t\tindex,",
+      "\t\t\t) {",
+      "\t\t\t\t\treturn Container();",
+      "\t\t\t},",
+      "\t\t\tchildCount: 1,",
+      "\t),",
+      ")"
+    ],
+    "description": "SliverList Widget"
+  },
+  "TextStyle style": {
+    "prefix": "textstyle-style",
+    "body": [
+      "TextStyle(",
+      "\t\t\t//fontWeight: FontWeight.bold,",
+      "\t\t\t//color: Colors.white,",
+      "\t\t\t//fontSize: 28.0,",
+      "\t\t\t//letterSpacing: -1.2,",
+      "\t\t\t//backgroundColor:",
+      "\t\t\t//decoration:",
+      "\t\t\t//fontFamily:",
+      "\t\t\t//height: // line height:final height of text = fontSize * line height",
+      "\t)"
+    ],
+    "description": "TextStyle style"
+  },
+  "Image Asset Widget": {
+    "prefix": "imageasset-widget",
+    "body": [
+      "Image.asset(",
+      "\t'path',",
+      "\t // in case the image should be obatined from some dart package",
+      "\tpackage: 'some/dart/package',",
+      "\twidth: 200,",
+      "\theight: double.infinity,",
+      "\t // I guess if you specified width and/or height",
+      "\tfit: BoxFit.contain,",
+      "\tcolor: Colors.red,",
+      "\tcolorBlendMode: BlendMode.darken,",
+      "\tsemanticLabel: 'my image alt',",
+      ")"
+    ],
+    "description": "Image Asset Widget"
+  },
+  "Image Network Widget": {
+    "prefix": "imagenetwork-widget",
+    "body": [
+      "Image.network(",
+      "\t'url',",
+      "\tloadingBuilder: (",
+      "\t\t\tcontext,",
+      "\t\t\tchild,",
+      "\t\t\tprogress,",
+      "\t) {",
+      "\t\t\treturn progress == null",
+      "\t\t\t\t\t\t\t? child",
+      "\t\t\t\t\t\t\t: LinearProgressIndicator(",
+      "\t\t\t\t\t\t\t\t\t\t\t//",
+      "\t\t\t\t\t\t\t\t\t\t\t);",
+      "\t},",
+      "\t // in case the image should be obatined from some dart package",
+      "\tpackage: 'some/dart/package',",
+      "\twidth: 200,",
+      "\theight: double.infinity,",
+      "\t // I guess if you specified width and/or height",
+      "\tfit: BoxFit.contain,",
+      "\tcolor: Colors.red,",
+      "\tcolorBlendMode: BlendMode.darken,",
+      "\tsemanticLabel: 'my image alt',",
+      ")"
+    ],
+    "description": "Image Network Widget"
+  },
+  "BoxDecoration ppty": {
+    "prefix": "boxdecoration",
+    "body": [
+      "BoxDecoration(",
+      "\t//gradient: LinearGradient(colors: []),",
+      "\t//  use either borderRadius or shape: BoxShape.circular but not both",
+      "\t//borderRadius: BorderRadius.circular(12.0),",
+      "\t// BoxShape.circle applies borderRadius 50%",
+      "\t//shape: BoxShape.circle,",
+      "\t//color: Colors.orange,",
+      "\t// image: DecorationImage( // CachedNetworkImageProvider",
+      "\t//   image: NetworkImage('url'), //AssetImage()",
+      "\t//   image should stretch to fill container",
+      "\t//   fit: BoxFit.cover,",
+      "\t// ),",
+      "\t// border: const Border.all(",
+      "\t//   color: Colors.black,",
+      "\t//   width: 8,",
+      "\t// ),",
+      "\t// boxShadow: const BoxShadow(",
+      "\t//   color: Colors.black,",
+      "\t//   offset: Offset(0, 2),",
+      "\t//   blurRadius: 4,",
+      "\t// ),",
+      "),"
+    ],
+    "description": "BoxDecoration ppty"
   }
 }
