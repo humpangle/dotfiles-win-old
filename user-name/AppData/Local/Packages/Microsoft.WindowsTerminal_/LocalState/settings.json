@@ -35,10 +35,13 @@
       },
       "keys": "alt+shift+d"
     },
-    { "command": "tabSearch", "keys": "ctrl+shift+s" }
+    {
+      "command": "tabSearch",
+      "keys": "ctrl+shift+s"
+    }
   ],
-  "copyFormatting": "none",
   "copyOnSelect": true,
+  "copyFormatting": true,
   "defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
   "launchMode": "maximized",
   "multiLinePasteWarning": false,
